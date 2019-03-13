@@ -126,29 +126,38 @@
 				</control>
 				<control type="image">
 					<right>20</right>
-					<top>320</top>
-					<width>80</width>
-					<height>55</height>
+					<top>335</top>
+					<width>60</width>
+					<height>40</height>
 					<aspectratio>keep</aspectratio>
 					<texture>$INFO[ListItem.MPAA,flags/mpaa/,.png]</texture>
 					<bordertexture colordiffuse="grey2">mpaa_box2.png</bordertexture>
 				</control>
 				<control type="image">
-					<left>20</left>
-					<top>320</top>
-					<width>100</width>
-					<height>70</height>
+					<left>170</left>
+					<top>325</top>
+					<width>85</width>
+					<height>60</height>
 					<aspectratio>keep</aspectratio>
 					<texture>$INFO[ListItem.Studio,resource://resource.images.studios.coloured/,.png]</texture>
 				</control>
-				<control type="label" id="5100">
+				<control type="image">
+					<left>20</left>
+					<top>325</top>
+					<width>85</width>
+					<height>60</height>
+					<aspectratio>keep</aspectratio>
+					<texture background="true">$VAR[Studio]</texture>
+				</control>
+<!-- RunScript(script.skin.helper.service,action=stripstring,splitchar=.,string=$INFO[System.BuildVersion],output=kodiversion_main) -->
+				<control type="label">
 					<top>385</top>
 					<width>660</width>
 					<height>60</height>
 					<font>font40</font>
 					<scroll>true</scroll>
 					<textoffsetx>15</textoffsetx>
-					<label>$INFO[ListItem.Label]</label>
+					<label>$INFO[Window.Property(kodiversion_main)]</label>
 				</control>
 				<control type="label"> 
 					<left>20</left>
@@ -170,11 +179,10 @@
 				</control>
 				<control type="textbox">
 					<label>$INFO[ListItem.Plot]</label>
-					<top>545</top>
+					<top>540</top>
 					<left>40</left>
 					<width>600</width>
-					<height>360</height>
-					<aligny>center</aligny>
+					<height>380</height>
 					<font>font35tb</font>
 					<textcolor>white2</textcolor>
 					<autoscroll time="3000" delay="2500" repeat="5000"></autoscroll>

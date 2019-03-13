@@ -22,7 +22,8 @@
 	</variable>
 
    <variable name="Label_InfoLine">
-        <value>$VAR[Label_Genre][CR]$VAR[Label_Premiered]$VAR[Label_Duration]</value>
+        <value condition="[Container.Content(episodes) | Container.Content(seasons) | Container.Content(tvshows)]">$VAR[Label_Genre][CR]$VAR[Label_Premiered]$VAR[Label_Duration]</value>
+        <value condition="Container.Content(movies)">$VAR[Label_Premiered]$VAR[Label_Duration]</value>
     </variable>
 
     <variable name="Label_MPAA">
