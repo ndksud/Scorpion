@@ -1,5 +1,4 @@
-"""
-    Repository, addons.xml and addons.xml.md5 structural generator
+""" repository files and addons.xml generator """
 
         Modifications:
 
