@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<!-- Video List -->
+	<include name="CommonList">
+		<control type="group">
+			<left>75</left>
+			<top>120</top>
+			<width>1060</width>
+			<height>930</height>
+			<visible>Control.IsVisible(50)</visible>
+			<include>WindowSlide</include>
+			<include>SettingsBG</include>
+			<include>slideright</include>
+			<control type="group">
+				<!-- <control type="image"> -->
+					<!-- <description>background image</description> -->
+					<!-- <left>0</left> -->
+					<!-- <top>-6</top> -->
+					<!-- <width>1030</width> -->
+					<!-- <height>15</height> -->
+					<!-- <texture background="true" border="0">listpanelT.png</texture> -->
+					<!-- <include>PanelSlide</include> -->
+					<!-- <visible>Control.IsVisible(50)</visible> -->
+				<!-- </control> -->
+				<!-- <control type="image"> -->
+					<!-- <description>background image</description> -->
+					<!-- <left>0</left> -->
+					<!-- <top>914</top> -->
+					<!-- <width>1030</width> -->
+					<!-- <height>15</height> -->
+					<!-- <texture background="true" border="0">listpanelB.png</texture> -->
+					<!-- <visible>Control.IsVisible(50)</visible> -->
+				<!-- </control> -->
+				<control type="list" id="50">
+					<left>0</left>
+					<top>9</top>
+					<width>1060</width>
+					<height>905</height>
+					<onup>9031</onup>
+					<ondown>50</ondown>
+					<viewtype label="Common List">list</viewtype>
+					<preloaditems>2</preloaditems>
+					<pagecontrol>60</pagecontrol>
+					<scrolltime tween="quadratic" easing="out">200</scrolltime>
+					<include>PanelSlide</include>
+					<itemlayout height="113" width="1020">
+						<control type="label">
+							<left>50</left>
+							<top>10</top>
+							<width>1000</width>
+							<textcolor>black</textcolor>
+							<shadowcolor>white</shadowcolor>
+							<label>BACK</label>
+							<visible>ListItem.IsParentFolder</visible>
+							<include>Label_FadeIn</include>
+						</control>
+						<control type="label">
+							<left>50</left>
+							<top>10</top>
+							<width>900</width>
+							<textcolor>black</textcolor>
+							<shadowcolor>white</shadowcolor>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>!ListItem.IsParentFolder</visible>
+							<include>VisFade</include>
+						</control>
+					</itemlayout>
+					<focusedlayout height="113" width="1030">
+						<control type="image">
+							<width>1030</width>
+							<height>113</height>
+							<include>FOScroll</include>
+							<texture>listpanelButton.png</texture>
+						</control>
+						<control type="label">
+							<left>50</left>
+							<top>10</top>
+							<width>1000</width>
+							<textcolor>white</textcolor>
+							<shadowcolor>grey2</shadowcolor>
+							<label>BACK</label>
+							<visible>ListItem.IsParentFolder</visible>
+							<include>Label_FadeIn</include>
+						</control>
+						<control type="label">
+							<left>50</left>
+							<top>10</top>
+							<width>1000</width>
+							<textcolor>black</textcolor>
+							<shadowcolor>white</shadowcolor>
+							<label>BACK</label>
+							<visible>ListItem.IsParentFolder</visible>
+							<include>Label_FadeOut</include>
+						</control>
+						<control type="label">
+							<left>50</left>
+							<top>10</top>
+							<width>900</width>
+							<textcolor>black</textcolor>
+							<shadowcolor>white</shadowcolor>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>!ListItem.IsParentFolder</visible>
+							<include>Label_FadeOut</include>
+						</control>
+						<control type="label">
+							<left>50</left>
+							<top>10</top>
+							<width>900</width>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>!ListItem.IsParentFolder</visible>
+							<include>Label_FadeIn</include>
+						</control>
+					</focusedlayout>
+				</control>
+			</control>
+		</control>
+	</include>
+
+</includes>
